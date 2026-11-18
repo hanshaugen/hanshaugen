@@ -15,7 +15,11 @@ cp -a "$root/frontpage/." "$dest/"
 
 if [[ ! -f "$src/index.html" ]]; then
   echo "Henter $clinic_repo"
-  git clone --depth 1 --branch main "$clinic_repo" "$src"
+  if [[ -n "${CLINIC_TOKEN:-}" ]]; then
+    git clone --depth 1 --branch main "https://x-access-token:${CLINIC_TOKEN}@github.com/hanshaugen/smerteklinikkenoslo.git" "$src"
+  else
+    git clone --depth 1 --branch main "$clinic_repo" "$src"
+  fi
 fi
 
 mkdir -p "$dest/smerteklinikkenoslo"

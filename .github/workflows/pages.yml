@@ -22,6 +22,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Assemble site
+        env:
+          CLINIC_TOKEN: ${{ secrets.CLINIC_TOKEN }}
         run: bash script/assemble.sh
       - uses: actions/upload-pages-artifact@v3
         with:

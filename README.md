@@ -38,7 +38,7 @@ python3 -m http.server 8765 --directory _site
 
 ## Det som må gjøres én gang
 
-Repoene må være offentlige hvis GitHub-kontoen er på gratisplanen. Pages fra private repoer krever betalt plan.
+Repoene bør være offentlige. Da virker GitHub Pages på gratisplanen, og bygget kan hente klinikksiden uten ekstra token. Er `smerteklinikkenoslo` privat, legg en lese-token inn som hemmelighet `CLINIC_TOKEN` på `hanshaugen/hanshaugen`. Pages fra et privat repo krever i tillegg betalt GitHub-plan.
 
 1. Push dette repoet til `hanshaugen/hanshaugen`, gren `main`.
 2. Push `smerteklinikkenoslo/` til `hanshaugen/smerteklinikkenoslo`, gren `main`.
