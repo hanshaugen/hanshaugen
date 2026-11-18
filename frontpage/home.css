@@ -81,13 +81,6 @@ h1 {
   line-height: 1.35;
 }
 
-.note {
-  margin: 1.25rem 0 0;
-  max-width: 22em;
-  color: var(--muted);
-  font-size: 1.05rem;
-}
-
 :focus-visible {
   outline: 2px solid var(--brass);
   outline-offset: 3px;
